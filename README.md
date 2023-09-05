@@ -13,6 +13,10 @@ c. Docker Hubからダウンロードして実行する
 
 ## 1-a. source code build and run
 
+    brew install rustup-init
+    rustup-init
+    cargo install wasm-pack
+
     cargo build --target wasm32-wasi --release
 
     sudo docker buildx build --platform wasi/wasm32 --load -t hello-wasm:0.1 .
