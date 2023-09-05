@@ -8,8 +8,8 @@ c. Docker Hubからダウンロードして実行する
 
 ## 0. preparation
 
-   sudo docker buildx create --name wasmbuilder --driver docker-container --bootstrap↲
-   sudo docker buildx use wasmbuilder↲ 
+    sudo docker buildx create --name wasmbuilder --driver docker-container --bootstrap↲
+    sudo docker buildx use wasmbuilder↲ 
 
 ## 1-a. source code build and run
 
