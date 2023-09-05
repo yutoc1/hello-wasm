@@ -16,14 +16,14 @@ c. Docker Hubからダウンロードして実行する
     cargo build --target wasm32-wasi --release
 
     sudo docker buildx build --platform wasi/wasm32 --load -t hello-wasm:0.1 .
-    sudo docker container run --rm --name=hello-wasm --runtime=io.containerd.wasmedge.v1 hello-wasm:0.1
+    sudo docker container run --rm --name=hello-wasm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 hello-wasm:0.1
 
 ## 1-b. wasm run
 
     cd wasm
     sudo docker buildx build --platform wasi/wasm32 --load -t hello-wasm:0.1 .
-    sudo docker container run --rm --name=hello-wasm --runtime=io.containerd.wasmedge.v1 hello-wasm:0.1
+    sudo docker container run --rm --name=hello-wasm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 hello-wasm:0.1
 
 ## 1-c. Docker Hub Use
 
-    sudo docker container run --rm --name=hello-wasm --rutime=io.containerd.wasmedge.v1 yutoc1/hello-wasm:0.1
+    sudo docker container run --rm --name=hello-wasm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 yutoc1/hello-wasm:0.1
